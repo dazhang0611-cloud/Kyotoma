@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11110f">
+  <meta name="description" content="Kyotoma — cuisine japonaise, sushi, ramen et créations maison.">
+  <title>Kyotoma — Cuisine japonaise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#171714;--paper:#f6f2e9;--muted:#77736b;--red:#b83b2d;--line:#ded8cc;--gold:#c6a66b}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+    header{position:absolute;z-index:5;top:0;left:0;width:100%;color:#fff;border-bottom:1px solid #ffffff30}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:"Playfair Display",serif;font-size:29px;letter-spacing:2px}
+    .brand span{color:#e7b6a2}.links{display:flex;gap:30px;font-size:13px;letter-spacing:.08em;text-transform:uppercase}.links a:hover{color:#e7b6a2}
+    .nav-cta{border:1px solid #ffffff9c;padding:11px 17px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+    .hero{min-height:710px;height:90vh;max-height:850px;position:relative;display:flex;align-items:center;color:white;background:linear-gradient(90deg,rgba(12,13,12,.88),rgba(12,13,12,.52) 52%,rgba(12,13,12,.12)),url("https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=2000&q=85") center/cover}
+    .hero:after{content:"";position:absolute;inset:auto 0 0;height:130px;background:linear-gradient(transparent,var(--paper))}
+    .hero-content{position:relative;z-index:1;padding-top:80px;max-width:650px}.eyebrow{color:#e7b6a2;text-transform:uppercase;letter-spacing:.22em;font-size:11px;font-weight:700}
+    h1,h2,h3{font-family:"Playfair Display",serif;font-weight:500}h1{font-size:clamp(54px,8vw,92px);line-height:.98;margin:22px 0}.hero p{font-size:17px;line-height:1.8;color:#eee9df;max-width:490px}
+    .btn{display:inline-block;background:var(--red);color:white;padding:15px 23px;margin-top:20px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--red);transition:.2s}.btn:hover{background:#922b21}
+    .section{padding:100px 0}.intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.intro h2,.section-title{font-size:clamp(38px,5vw,58px);line-height:1.05;margin:16px 0 22px}.intro p,.lead{color:var(--muted);line-height:1.9;font-size:15px}
+    .stamp{width:170px;height:170px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;text-align:center;margin:30px auto 0;color:var(--red);font-family:"Playfair Display",serif;font-size:19px;transform:rotate(-10deg)}
+    .menu-section{background:#1b1b18;color:#f8f3e9}.menu-head{text-align:center;margin-bottom:52px}.menu-head .eyebrow{color:#d8a18c}.menu-head p{color:#bcb7ad}
+    .menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 70px}.menu-item{padding:22px 0;border-bottom:1px solid #ffffff26}.item-top{display:flex;justify-content:space-between;gap:20px;align-items:baseline}.item-top h3{font-size:23px;margin:0}.price{color:#e7b6a2;font-size:15px;white-space:nowrap}.menu-item p{color:#aaa69d;font-size:13px;line-height:1.65;margin:9px 0 0}
+    .feature{display:grid;grid-template-columns:1fr 1fr;min-height:480px;background:#e9e2d6}.feature-img{background:url("https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=1200&q=85") center/cover;min-height:380px}.feature-copy{padding:70px clamp(28px,7vw,95px);align-self:center}.feature-copy h2{font-size:48px;line-height:1.08;margin:15px 0}
+    .visit{display:grid;grid-template-columns:1fr 1fr;gap:70px}.visit h2{font-size:52px;margin:15px 0}.detail{padding:17px 0;border-bottom:1px solid var(--line)}.detail strong{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}.detail span{color:var(--muted);line-height:1.7}
+    .map-placeholder{background:#e8e1d5;min-height:370px;display:grid;place-items:center;text-align:center;padding:30px;color:var(--muted)}.map-placeholder .pin{font-size:35px;color:var(--red)}
+    footer{background:#141411;color:#f8f3e9;padding:34px 0}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer-note{font-size:12px;color:#a7a196}
+    @media(max-width:760px){.wrap{width:min(100% - 34px,600px)}.links{display:none}.nav{height:70px}.hero{min-height:650px;height:85vh;background-position:58% center}.hero p{font-size:15px}.section{padding:72px 0}.intro,.visit,.feature{grid-template-columns:1fr;gap:35px}.intro .stamp{margin:20px 0}.menu-grid{grid-template-columns:1fr}.feature-img{min-height:300px;order:0}.feature-copy{padding:48px 28px}.visit h2{font-size:43px}.footer-row{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#">KYOT<span>O</span>MA</a><nav class="links"><a href="#histoire">Notre esprit</a><a href="#carte">La carte</a><a href="#visite">Nous trouver</a></nav><a class="nav-cta" href="#visite">Nous contacter</a></div></header>
+<main>
+  <section class="hero"><div class="wrap hero-content"><div class="eyebrow">Cuisine japonaise · Fraîcheur & savoir-faire</div><h1>Un goût<br>du Japon.</h1><p>Bienvenue chez Kyotoma. Découvrez une cuisine japonaise généreuse, préparée avec soin et pensée pour le plaisir de partager.</p><a class="btn" href="#carte">Découvrir la carte</a></div></section>
+  <section class="section" id="histoire"><div class="wrap intro"><div><div class="eyebrow">Bienvenue chez Kyotoma</div><h2>La simplicité<br>des bonnes choses.</h2><p>Chez Kyotoma, nous aimons les beaux produits, les gestes précis et les saveurs qui rassemblent. Installez-vous, prenez le temps et laissez-vous tenter par nos incontournables japonais.</p><p><em>Une expérience à savourer, sur place ou à emporter.</em></p></div><div><div class="stamp">心を込めて<br><small style="font:11px 'DM Sans';letter-spacing:2px">FAIT AVEC SOIN</small></div></div></div></section>
+  <section class="section menu-section" id="carte"><div class="wrap"><div class="menu-head"><div class="eyebrow">Nos incontournables</div><h2 class="section-title">La carte</h2><p>Une sélection à personnaliser selon votre véritable menu.</p></div>
+    <div class="menu-grid">
+      <div>
+        <div class="menu-item"><div class="item-top"><h3>Soupe miso</h3><span class="price">3,50 €</span></div><p>Tofu, algues wakamé et ciboule.</p></div>
+        <div class="menu-item"><div class="item-top"><h3>Edamame</h3><span class="price">4,50 €</span></div><p>Fèves de soja légèrement salées.</p></div>
+        <div class="menu-item"><div class="item-top"><h3>California saumon avocat</h3><span class="price">6,90 €</span></div><p>Riz vinaigré, saumon, avocat et sésame.</p></div>
+        <div class="menu-item"><div class="item-top"><h3>Assortiment sushi</h3><span class="price">14,90 €</span></div><p>Sélection de sushi du chef.</p></div>
+      </div><div>
+        <div class="menu-item"><div class="item-top"><h3>Ramen maison</h3><span class="price">13,90 €</span></div><p>Nouilles, bouillon savoureux, légumes et garniture.</p></div>
+        <div class="menu-item"><div class="item-top"><h3>Gyoza</h3><span class="price">6,50 €</span></div><p>Raviolis japonais grillés, servis par six.</p></div>
+        <div class="menu-item"><div class="item-top"><h3>Chirashi saumon</h3><span class="price">15,90 €</span></div><p>Tranches de saumon frais sur riz vinaigré.</p></div>
+        <div class="menu-item"><div class="item-top"><h3>Mochi glacé</h3><span class="price">5,50 €</span></div><p>Douceur japonaise, selon les parfums disponibles.</p></div>
+      </div>
+    </div>
+  </div></section>
+  <section class="feature"><div class="feature-img" role="img" aria-label="Assortiment de sushi japonais"></div><div class="feature-copy"><div class="eyebrow">Le plaisir du partage</div><h2>Chaque bouchée<br>raconte une histoire.</h2><p class="lead">Des classiques japonais aux petites découvertes, composez votre moment Kyotoma.</p><a class="btn" href="#visite">Préparer votre visite</a></div></section>
+  <section class="section" id="visite"><div class="wrap visit"><div><div class="eyebrow">À bientôt chez nous</div><h2>Retrouvez<br>Kyotoma.</h2><p class="lead">Passez nous voir ou contactez-nous pour toute question ou réservation.</p><div class="detail"><strong>Adresse</strong><span>16 avenue Victor Hugo, 93320 Les Pavillons-sous-Bois</span></div><div class="detail"><strong>Horaires</strong><span>Lundi au vendredi : 12h–14h30 et 18h30–23h<br>Samedi et dimanche : 18h30–23h</span></div><div class="detail"><strong>Téléphone</strong><span>01 48 49 63 77</span></div><a class="btn" href="tel:+33148496377">Appeler le restaurant</a></div><div class="map-placeholder"><div><div class="pin">⌖</div><strong>Kyotoma — Les Pavillons-sous-Bois</strong><p>16 avenue Victor Hugo<br>93320 Les Pavillons-sous-Bois</p><a class="btn" style="margin-top:8px" href="https://www.google.com/maps/search/?api=1&query=16+avenue+Victor+Hugo+93320+Les+Pavillons-sous-Bois" target="_blank" rel="noopener">Voir l’itinéraire</a></div></div></div></section>
+</main>
+<footer><div class="wrap footer-row"><div class="brand">KYOT<span style="color:#e7b6a2">O</span>MA</div><div class="footer-note">© 2026 Kyotoma · Cuisine japonaise</div><div class="footer-note">16 avenue Victor Hugo · 93320 Les Pavillons-sous-Bois</div></div></footer>
+</body></html>
